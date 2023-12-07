@@ -1,0 +1,26 @@
+---
+title: "Flagstaff_Weather"
+author: "Kyle Bambling"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(BamblingChapter16)
+```
+
+## Dot Plot of Precipitation
+
+```{r, echo=FALSE}
+ggplot(data= Flagstaff_Weather, aes(x=Date, y=Precip)) +
+  geom_point()
+```
+
+## Dot Plot of Snowfall
+
+```{r, echo=FALSE}
+ggplot(data= Flagstaff_Weather, aes(x=Date, y=SnFall)) +
+  geom_point()
+```
